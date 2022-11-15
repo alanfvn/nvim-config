@@ -35,6 +35,7 @@ vim.opt.splitright = true
 --fold 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.cmd("set nofoldenable")
 --other
 vim.opt.shortmess:append "c"
 vim.opt.iskeyword:append("-")

@@ -7,4 +7,12 @@ tutorials.
 
 - [Git](https://git-scm.com/)
 - [NodeJS](https://nodejs.org/es/)
-- [MinGW](https://www.mingw-w64.org/)
+- [C compiler](https://github.com/niXman/mingw-builds-binaries)
+- [NerdFont](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/JetBrainsMono.zip)
+- [RipGrep](https://github.com/BurntSushi/ripgrep/releases)
+
+## Install this config
+
+### Windows
+`git clone https://github.com/alanfvn/nvim-config ~/AppData/Local/nvim/`
+

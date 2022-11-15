@@ -40,12 +40,14 @@ return packer.startup(function(use)
   use {"numToStr/FTerm.nvim"}
   use {"goolord/alpha-nvim"}
   use {"akinsho/bufferline.nvim", tag = "v3.*"}
-  use {
+  use({
     "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
-    setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
-    ft = { "markdown" }
-  }
+    opt = true,
+    ft = "markdown",
+    run = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+  })
   -- Themes
   use {"rmehri01/onenord.nvim"}
   use {"https://gitlab.com/madyanov/gruber.vim", as = "gruver"}
