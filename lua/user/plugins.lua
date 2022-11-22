@@ -49,8 +49,8 @@ return packer.startup(function(use)
     end,
   })
   -- Themes
-  use {"rmehri01/onenord.nvim"}
-  use {"https://gitlab.com/madyanov/gruber.vim", as = "gruver"}
+  use {"https://gitlab.com/madyanov/gruber.vim", as = "gruber"}
+  use "atelierbram/Base4Tone-nvim"
   -- AutoCompletion
   use {"hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a"}
   use {"hrsh7th/cmp-nvim-lsp"}
@@ -73,7 +73,7 @@ return packer.startup(function(use)
   use {
     "nvim-treesitter/nvim-treesitter",
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-    branch = "v0.8.0"
+    -- branch = "v0.8.0"
   }
 
   if PACKER_BOOTSTRAP then

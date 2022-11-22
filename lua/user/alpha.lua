@@ -5,11 +5,23 @@ end
 
 local dashboard = require "alpha.themes.dashboard"
 dashboard.section.header.val = {
-  [[    _   __                _         ]],
-  [[   / | / /__  ____ _   __(_)___ ___ ]],
-  [[  /  |/ / _ \/ __ \ | / / / __ `__ \]],
-  [[ / /|  /  __/ /_/ / |/ / / / / / / /]],
-  [[/_/ |_/\___/\____/|___/_/_/ /_/ /_/ ]],
+[[      ............                    ...                      ..........      ]],
+[[   ',;:lc;;:lolc::::::;;,..        .:llooool:.         .',:c:;::::cc::lo:;clc. ]],
+[[ .lc''::. .cl'....':lcodkOxdl;.    cKo'. .'cl.    .,;::cool;,'''',,'..cl..;cl:.]],
+[[ ;o;,;::,..';;'.;ccc:,:oxkxkKXKOo:.:0kdl,;c;..,clooolc:::,.':cldo,.. .oOookx:. ]],
+[[  .',:lcc:,'cl..,clc,';cll:lxO0OolxKXOo;.',;lddlcooldo:;:cll:cc::'..'oOKNkc,.  ]],
+[[     ..:occccc..cdc::colccc:;,'..:xd,.,'  ,c;',,.'';odoollldkOx,..;xXKd:,.     ]],
+[[        'odol:clo;.;oxo:,..      .dO::x:.:x:. ...  ....:dOdclc..;dXNKd,        ]],
+[[          ':;,;' .,cxo:;.        .dXc.'...'.           ;KKocl:'',;:;.          ]],
+[[                'cl:,ckd'         lO;.....'.           ,kl.'d0x,               ]],
+[[               .xk::col.          :x,.'. ...           ld..;xXO;               ]],
+[[                :kkdlc,  .        ;x,.'. .'.  .       .xl .dNKc.               ]],
+[[                 .:dxoc,;:,'.     'x: ..     ...    .,dKk:ldc.                 ]],
+[[                    ',.......      od...            ';'''..                    ]],
+[[                                   .dc...                                      ]],
+[[                                    ;x;                                        ]],
+[[                                     :d,                                       ]],
+[[                                      ,;.                                      ]],
 }
 dashboard.section.buttons.val = {
   dashboard.button("f", " " .. " Find file", ":Telescope find_files <CR>"),

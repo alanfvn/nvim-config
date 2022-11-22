@@ -23,8 +23,9 @@ end
 -- * NORMAL MODE * --
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
--- Delete without buffer 
+-- Delete without putting the deleted stuff in the buffer 
 keymap("n", "<leader>d", "\"_dd", opts)
+keymap("v", "<leader>d", "\"_dd", opts)
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)

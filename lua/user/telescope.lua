@@ -8,13 +8,15 @@ telescope.setup{
   pickers = {
     buffers = {
       initial_mode = "normal"
+    },
+    find_files = {
+      initial_mode = "normal"
     }
   },
   defaults = {
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "smart" },
-
     file_ignore_patterns = {
       "node_modules",
       "build",

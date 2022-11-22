@@ -14,5 +14,6 @@ tutorials.
 ## Install this config
 
 ### Windows
-`git clone https://github.com/alanfvn/nvim-config ~/AppData/Local/nvim/`
-
+```
+git clone https://github.com/alanfvn/nvim-config ~/AppData/Local/nvim/
+```
