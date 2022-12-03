@@ -1,1 +1,1 @@
-pcall(vim.cmd, "colorscheme gruber")
+pcall(vim.cmd, "colorscheme base16-lime")

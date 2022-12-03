@@ -28,6 +28,8 @@ packer.init {
 }
 
 return packer.startup(function(use)
+  -- temp stuff
+  use "nvim-treesitter/playground"
   -- General plugins
   use {"lewis6991/impatient.nvim"}
   use {"wbthomason/packer.nvim"}
@@ -39,7 +41,6 @@ return packer.startup(function(use)
   use {"kyazdani42/nvim-web-devicons"}
   use {"numToStr/FTerm.nvim"}
   use {"goolord/alpha-nvim"}
-  use {"akinsho/bufferline.nvim", tag = "v3.*"}
   use({
     "iamcco/markdown-preview.nvim",
     opt = true,
@@ -49,8 +50,7 @@ return packer.startup(function(use)
     end,
   })
   -- Themes
-  use {"https://gitlab.com/madyanov/gruber.vim", as = "gruber"}
-  use "atelierbram/Base4Tone-nvim"
+  use "RRethy/nvim-base16"
   -- AutoCompletion
   use {"hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a"}
   use {"hrsh7th/cmp-nvim-lsp"}
@@ -70,11 +70,7 @@ return packer.startup(function(use)
   use {"neovim/nvim-lspconfig"}
   use {"williamboman/mason.nvim"}
   use {"williamboman/mason-lspconfig.nvim"}
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-    -- branch = "v0.8.0"
-  }
+  use { "nvim-treesitter/nvim-treesitter" }
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

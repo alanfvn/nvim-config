@@ -5,27 +5,19 @@ local opts = { silent = true }
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 
--- Modes
-local modes = { normal= "n", insert="i", visual="v", vblock="x", term="t", command="c" }
+-- Modes: normal "n", insert "i", visual "v", vblock "x", term "t", command "c" 
 
-
-for _, val in pairs(modes) do
-  if val == 't' or val == 'c' then
-    goto continue
-  end
-  keymap(val, '<Up>', '<Nop>', opts)
-  keymap(val, '<Down>', '<Nop>', opts)
-  keymap(val, '<Left>', '<Nop>', opts)
-  keymap(val, '<Right>', '<Nop>', opts)
-  ::continue::
-end
+-- Remove arrow keys
+keymap({"n", "i", "v", "x"}, '<Up>', '<Nop>', opts)
+keymap({"n", "i", "v", "x"}, '<Down>', '<Nop>', opts)
+keymap({"n", "i", "v", "x"}, '<Left>', '<Nop>', opts)
+keymap({"n", "i", "v", "x"}, '<Right>', '<Nop>', opts)
 
 -- * NORMAL MODE * --
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 -- Delete without putting the deleted stuff in the buffer 
-keymap("n", "<leader>d", "\"_dd", opts)
-keymap("v", "<leader>d", "\"_dd", opts)
+keymap({"n", "v"}, "<leader>d", "\"_dd", opts)
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -64,3 +56,5 @@ keymap("n", "<leader>bf", ":Telescope buffers<CR>", opts)
 -- FTerm
 keymap("n", "<C-\\>", "<CMD>lua require('FTerm').toggle()<CR>")
 keymap("t", "<C-\\>", "<C-\\><C-n><CMD>lua require('FTerm').toggle()<CR>")
+-- TS Playground
+keymap("n", "<leader>hi", ":TSHighlightCapturesUnderCursor<CR>", opts)

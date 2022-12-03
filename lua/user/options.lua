@@ -27,16 +27,16 @@ vim.opt.numberwidth = 4
 vim.opt.cursorline = true
 vim.opt.showmode = false
 vim.opt.termguicolors = true
-vim.opt.showtabline = 2
+vim.opt.showtabline = 1
 vim.opt.cmdheight = 2
 vim.opt.pumheight = 10
 vim.opt.splitbelow = true
 vim.opt.splitright = true
---fold 
+-- fold 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.cmd("set nofoldenable")
---other
+-- other
 vim.opt.shortmess:append "c"
-vim.opt.iskeyword:append("-")
+vim.opt.iskeyword:append "-"
 -- colorscheme options
